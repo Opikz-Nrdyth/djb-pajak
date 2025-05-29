@@ -77,8 +77,8 @@ Pendekatan ini memudahkan pengembangan halaman baru dengan menjaga konsistensi t
 
 Karena ini adalah prototipe frontend murni (HTML, CSS, JavaScript klien):
 
-1.  Clone repositori ini: `git clone https://github.com/username/repository-name.git`
-2.  Navigasi ke direktori proyek: `cd repository-name`
+1.  Clone repositori ini: `git clone https://github.com/Opikz-Nrdyth/djb-pajak.git`
+2.  Navigasi ke direktori proyek: `cd djb-pajak`
 3.  Buka file HTML utama (misalnya `login.html` atau salah satu file halaman dashboard seperti `index.html`) langsung di browser web modern Anda.
 
 Tidak ada proses build atau dependensi backend yang diperlukan untuk menjalankan prototipe antarmuka ini.

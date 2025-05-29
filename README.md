@@ -63,7 +63,7 @@ Berikut adalah daftar halaman dan fungsionalitas utama yang telah diimplementasi
   - (Dalam pengembangan riil, JS akan digunakan untuk AJAX, validasi kompleks, dan manipulasi data).
 - **Font Awesome:** Untuk ikonografi di seluruh aplikasi.
 
-## Struktur Layout "Paten"
+## Struktur Layout
 
 Proyek ini dikembangkan dengan konsep layout dasar yang tetap (paten), terdiri dari:
 

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/asset/images/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/asset/stylesheet/admin-layout.css" />
+    <link rel="stylesheet" href="/asset/stylesheet/admin-wajib_pajak.css" />
+    <title>DJP - Management Wajib Pajak</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    /* Menggunakan versi yang lebih umum atau pastikan versi 6.7.2 benar */
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    /* Integrity untuk 6.5.1 */ crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <img src="/asset/images/icon.png" alt="DJP Logo" />
+          <span class="sidebar-logo-text">DJP</span>
+        </div>
+        <p class="sidebar-title">Sistem Informasi Pajak Bangunan</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="/admin/" id="nav-dashboard">
+              <i class="fas fa-tachometer-alt menu-icon"></i>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/admin/wajibpajak.html" class="active" id="nav-dashboard">
+              <i class="fas fa-users menu-icon"></i>
+              <span class="nav-text">Management Wajib Pajak</span>
+            </a>
+          </li>
+          <li>
+            <a href="/admin/tagihanperhitungan.html" id="nav-tagihan">
+              <i class="fas fa-file-invoice-dollar menu-icon"></i>
+              <span class="nav-text">Tagihan & Perhitungan</span>
+            </a>
+          </li>
+          <li class="has-submenu">
+            <a href="/admin/laporan-harian.html">
+              <i class="fas fa-chart-bar menu-icon"></i>
+              <span class="nav-text">Laporan Pajak</span>
+              <i class="fas fa-chevron-down arrow-icon"></i>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a href="/admin/laporan-detail.html"
+                  ><span class="nav-text">Laporan Detail</span></a
+                >
+              </li>
+              <li>
+                <a href="/admin/laporan-harian.html"
+                  ><span class="nav-text">Laporan Harian</span></a
+                >
+              </li>
+              <li>
+                <a href="/admin/laporan-bulanan.html"
+                  ><span class="nav-text">Laporan Bulanan</span></a
+                >
+              </li>
+              <li>
+                <a href="/admin/rekaptulasi.html"
+                  ><span class="nav-text">Rekapitulasi</span></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/admin/pengaturan.html">
+              <i class="fas fa-cog menu-icon"></i>
+              <span class="nav-text">Pengaturan</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-minimizer">
+        <button id="sidebarToggleBtn" aria-label="Toggle Sidebar">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      </div>
+    </aside>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <main class="main-content" id="mainContent">
+      <header class="content-header">
+        <div class="header-left">
+          <button
+            class="mobile-nav-toggle"
+            id="mobileNavToggle"
+            aria-label="Open Navigation Menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="greeting">
+            <h1>Management Wajib Pajak</h1>
+
+            <p>Selamat Datang, Admin!</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="search-bar">
+            <input type="text" placeholder="Cari..." />
+            <i class="fas fa-search"></i>
+          </div>
+          <button class="icon-button" aria-label="Notifikasi">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+          </button>
+          <div class="user-profile">
+            <img src="https://i.pravatar.cc/150?img=32" alt="Avatar Admin" />
+            <span>Nama Admin</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="content-body">
+        <div class="page-header">
+          <h1>Manajemen Wajib Pajak</h1>
+          <a href="/admin/tambahwajibpajak.html" class="btn-add-new">
+            <i class="fas fa-plus"></i> Tambah Wajib Pajak Baru
+          </a>
+        </div>
+
+        <div class="actions-bar">
+          <div class="search-filter-wp">
+            <input
+              type="text"
+              placeholder="Cari Wajib Pajak berdasarkan NIK atau Nama..."
+            />
+          </div>
+        </div>
+
+        <div class="filter-tabs">
+          <button class="tab-item active">Aktif</button>
+          <button class="tab-item">Tidak Aktif</button>
+          <button class="tab-item">Semua</button>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="selectAll" /></th>
+                <th>NIK</th>
+                <th>Nama Wajib Pajak</th>
+                <th>No. Telepon</th>
+                <th>Alamat</th>
+                <th>Noit</th>
+                <th>Jml Objek Pajak</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>2355001</td>
+                <td>Ahmad Subarjo</td>
+                <td>081234567890</td>
+                <td>Jl. Merdeka No. 1, Jakarta</td>
+                <td>17.00000</td>
+                <td>2</td>
+                <td class="action-buttons">
+                  <a href="/admin/laporan-detail.html" class="btn btn-view"
+                    ><i class="fas fa-eye"></i> Lihat Detail</a
+                  >
+                  <a href="#" class="btn btn-edit"
+                    ><i class="fas fa-edit"></i> Edit</a
+                  >
+                  <a href="#" class="btn btn-delete"
+                    ><i class="fas fa-trash"></i> Hapus</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>7158008</td>
+                <td>Bunga Citra Lestari</td>
+                <td>082345678901</td>
+                <td>Jl. Kemerdekaan No. 10, Bandung</td>
+                <td>20.80000</td>
+                <td>1</td>
+                <td class="action-buttons">
+                  <a href="/admin/laporan-detail.html" class="btn btn-view"
+                    ><i class="fas fa-eye"></i> Lihat Detail</a
+                  >
+                  <a href="#" class="btn btn-edit"
+                    ><i class="fas fa-edit"></i> Edit</a
+                  >
+                  <a href="#" class="btn btn-delete"
+                    ><i class="fas fa-trash"></i> Hapus</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>2258008</td>
+                <td>Charlie Van Houten</td>
+                <td>083456789012</td>
+                <td>Jl. Pahlawan No. 25, Surabaya</td>
+                <td>12.53000</td>
+                <td>3</td>
+                <td class="action-buttons">
+                  <a href="/admin/laporan-detail.html" class="btn btn-view"
+                    ><i class="fas fa-eye"></i> Lihat Detail</a
+                  >
+                  <a href="#" class="btn btn-edit"
+                    ><i class="fas fa-edit"></i> Edit</a
+                  >
+                  <a href="#" class="btn btn-delete"
+                    ><i class="fas fa-trash"></i> Hapus</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>1558003</td>
+                <td>Diana Sastra</td>
+                <td>084567890123</td>
+                <td>Jl. Nusantara No. 8, Medan</td>
+                <td>21.70000</td>
+                <td>1</td>
+                <td class="action-buttons">
+                  <a href="/admin/laporan-detail.html" class="btn btn-view"
+                    ><i class="fas fa-eye"></i> Lihat Detail</a
+                  >
+                  <a href="#" class="btn btn-edit"
+                    ><i class="fas fa-edit"></i> Edit</a
+                  >
+                  <a href="#" class="btn btn-delete"
+                    ><i class="fas fa-trash"></i> Hapus</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>5190441004</td>
+                <td>Eka Kurniawan</td>
+                <td>085678901234</td>
+                <td>Jl. Reformasi No. 3, Makassar</td>
+                <td>21.70000</td>
+                <td>2</td>
+                <td class="action-buttons">
+                  <a href="/admin/laporan-detail.html" class="btn btn-view"
+                    ><i class="fas fa-eye"></i> Lihat Detail</a
+                  >
+                  <a href="#" class="btn btn-edit"
+                    ><i class="fas fa-edit"></i> Edit</a
+                  >
+                  <a href="#" class="btn btn-delete"
+                    ><i class="fas fa-trash"></i> Hapus</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/asset/javascript/layout.js"></script>
+  </body>
+</html>

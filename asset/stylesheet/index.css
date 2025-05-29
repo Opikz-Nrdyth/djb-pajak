@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Arial", sans-serif; /* Anda bisa mengganti font ini */
+}
+
+body {
+  background-color: #f0f2f5; /* Warna latar belakang seperti di gambar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Lebar maksimum container */
+  padding: 20px;
+}
+
+/* Header - Logo DJP */
+.header {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-start; /* Logo di kiri atas */
+  margin-bottom: 40px; /* Jarak dari section login */
+}
+
+.logo-djp {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0056b3;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-djp img {
+  width: 30px;
+}
+
+/* Section Login */
+.login-section {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Lebar maksimum box login */
+  margin: 0 auto 60px auto; /* Tengah dan jarak ke konten bawah */
+}
+
+.login-section .welcome-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.login-section h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.info-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Jarak antar box */
+}
+
+.info-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 20px;
+  width: calc(50% - 10px); /* Setengah lebar dikurangi setengah gap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  cursor: pointer;
+}
+
+.info-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-box .icon {
+  font-size: 24px; /* Ukuran ikon placeholder */
+  margin-right: 15px;
+  color: #007bff;
+}
+
+.info-box .text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Konten Tambahan & Penjelasan */
+.additional-content,
+.explanation-section {
+  padding: 40px 0;
+  text-align: left; /* Ubah ke kiri untuk penjelasan */
+}
+
+.additional-content h2,
+.explanation-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Judul tetap di tengah */
+}
+
+.explanation-section h3 {
+  font-size: 22px;
+  margin-top: 30px; /* Jarak antar sub-judul penjelasan */
+  margin-bottom: 15px;
+  color: #0056b3; /* Warna sub-judul agar menonjol */
+}
+
+.explanation-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify; /* Ratakan teks penjelasan */
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.content-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.content-card .card-icon {
+  font-size: 32px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.content-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.content-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  text-align: left; /* Pastikan teks di card rata kiri */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  background-color: #fff; /* Footer dengan background putih */
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .login-section {
+    padding: 30px;
+  }
+
+  .login-section h1 {
+    font-size: 22px;
+  }
+
+  .info-boxes {
+    flex-direction: column; /* Box ikon ditumpuk di mobile */
+  }
+
+  .info-box {
+    width: 100%; /* Lebar penuh di mobile */
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr; /* Satu kolom di mobile */
+  }
+
+  .additional-content h2,
+  .explanation-section h2 {
+    font-size: 26px;
+  }
+  .explanation-section h3 {
+    font-size: 20px;
+  }
+  .explanation-section p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    justify-content: center; /* Logo di tengah di mobile kecil */
+    margin-bottom: 30px;
+  }
+
+  .login-section {
+    padding: 20px;
+  }
+
+  .login-section h1 {
+    font-size: 20px;
+  }
+
+  .login-button {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+
+  .info-box .icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .additional-content h2,
+  .explanation-section h2 {
+    font-size: 22px;
+  }
+  .explanation-section h3 {
+    font-size: 18px;
+  }
+  .content-card h3 {
+    font-size: 18px;
+  }
+
+  .content-card p,
+  .explanation-section p {
+    font-size: 14px;
+  }
+}

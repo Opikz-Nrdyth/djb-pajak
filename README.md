@@ -10,6 +10,7 @@ Seluruh desain dan interaksi dirancang agar responsif di berbagai perangkat, mul
 
 Berikut adalah daftar halaman dan fungsionalitas utama yang telah diimplementasikan dalam prototipe frontend ini:
 
+- **Landing Page:** Antarmuka ketika website dibuka dengan antar muka yang bersih dan fresh.
 - **Halaman Login:** Antarmuka masuk yang aman dan menarik dengan latar belakang gambar.
 - **Dashboard Utama:**
   - Tampilan ringkasan data penting melalui kartu metrik.
@@ -48,10 +49,6 @@ Berikut adalah daftar halaman dan fungsionalitas utama yang telah diimplementasi
   - Pengaturan umum aplikasi (zona waktu, format tanggal).
   - Preferensi notifikasi.
   - Informasi keamanan dasar dan placeholder untuk fitur lanjutan.
-- **Layout Admin yang "Paten":**
-  - Sidebar navigasi yang dinamis: dapat di-minimize di desktop/tablet, dan berubah menjadi menu off-canvas (hamburger) di mobile.
-  - Header utama dengan judul halaman dinamis, pencarian global, notifikasi, dan profil pengguna.
-  - Struktur konten modular dimana halaman baru dimuat ke dalam area konten utama (`<section class="content-body">`).
 - **Desain Responsif:** Semua halaman dirancang untuk beradaptasi dengan baik pada ukuran layar desktop, tablet, dan mobile.
 - **Animasi & Transisi:** Penggunaan animasi dan transisi CSS `ease-out` untuk meningkatkan pengalaman pengguna.
 
@@ -82,20 +79,9 @@ Karena ini adalah prototipe frontend murni (HTML, CSS, JavaScript klien):
 
 1.  Clone repositori ini: `git clone https://github.com/username/repository-name.git`
 2.  Navigasi ke direktori proyek: `cd repository-name`
-3.  Buka file HTML utama (misalnya `login.html` atau salah satu file halaman dashboard seperti `dashboard_manajemen_wp.html`) langsung di browser web modern Anda.
+3.  Buka file HTML utama (misalnya `login.html` atau salah satu file halaman dashboard seperti `index.html`) langsung di browser web modern Anda.
 
 Tidak ada proses build atau dependensi backend yang diperlukan untuk menjalankan prototipe antarmuka ini.
-
-## Screenshot Halaman (Saran)
-
-Untuk visualisasi yang lebih baik, Anda dapat menambahkan screenshot dari setiap halaman utama di sini.
-Contoh:
-
-- `[Screenshot Halaman Login]`
-- `[Screenshot Dashboard Utama]`
-- `[Screenshot Manajemen Wajib Pajak]`
-- `[Screenshot Laporan Harian]`
-- `[Screenshot Halaman Pengaturan]`
 
 ## Dikembangkan Oleh
 

@@ -1,19 +1,5 @@
 # Sistem Informasi Pajak Bangunan - Admin Dashboard (Frontend Prototype)
 
-<p align="center">
-  <a href="https://opikstudio.my.id/" target="_blank">
-    <img src="https://opikstudio.my.id/images/logo_White.png" alt="Opik Studio Logo" width="200">
-  </a>
-</p>
-
-<p align="center">
-  Prototipe frontend komprehensif untuk Admin Dashboard Sistem Informasi Pajak Bangunan. <br />
-  Dikembangkan dengan fokus pada antarmuka pengguna yang bersih, responsif, dan intuitif. <br />
-  <strong>Sebuah karya dari <a href="https://opikstudio.my.id/" target="_blank">Opik Studio</a>.</strong>
-</p>
-
----
-
 ## Deskripsi Singkat
 
 Proyek ini merupakan implementasi desain frontend untuk sebuah sistem admin dashboard yang ditujukan untuk pengelolaan data pajak bangunan. Dibuat untuk mendemonstrasikan kemampuan dalam merancang dan mengembangkan antarmuka pengguna (UI/UX) yang modern dan fungsional. Dashboard ini mencakup berbagai modul penting yang umum ditemukan dalam sistem informasi manajemen.
